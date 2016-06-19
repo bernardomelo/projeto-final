@@ -33,7 +33,7 @@ def readTrainingSet(fname):
         e retorna um dicionario com triplas (palavra,freq,escore) com o escore
         medio das palavras no comentarios.
     '''
-    stopWords = StopWords('C:/Users/Bernardo/Desktop/StopWords.txt')
+    stopWords = StopWords(#caminho das stopwords aqui)
     score = 0
     words = dict()
     temp = []
