@@ -1,3 +1,30 @@
+###############################################################################
+# Univesidade Federal de Pernambuco -- UFPE (http://www.ufpe.br)
+# Centro de Informatica -- CIn (http://www.cin.ufpe.br)
+# Bacharelado em Sistemas de Informacao
+# IF968 -- Programacao 1
+#
+# Autor:    Bernardo Gomes de Melo
+#            Aluno de S.I do Cin
+#
+# Email:    bgm@cin.ufpe.br
+#            
+#
+# Data:        2016-06-10
+#
+# Descricao:  Este e' um modelo de arquivo para ser utilizado para a implementacao
+#                do projeto pratico da disciplina de Programacao 1. 
+#                 A descricao do projeto encontra-se no site da disciplina e trata-se
+#                de uma adaptacao do projeto disponivel em 
+#               /t http://nifty.stanford.edu/2016/manley-urness-movie-review-sentiment/
+#                O objetivo deste projeto e' implementar um sistema de analise de
+#                sentimentos de comentarios de filmes postados no site Rotten Tomatoes.
+#
+# Licenca: The MIT License (MIT)
+#            Copyright(c) 2016 Bernardo Gomes de Melo, Aluno do CIn
+#
+###############################################################################
+
 
 import sys
 import re
@@ -66,7 +93,7 @@ def readTestSet(fname):
     reviews = []
     arq = open(fname,'r')
     for line in arq:
-        reviews.append((int(line[0]),line[1:-1]))
+        reviews.append((int(line[0]),clean_up(line[1:-1])))
     arq.close()
     return reviews
 
